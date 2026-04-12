@@ -1,188 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahesh Muthe | Data Analyst</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahesh Muthe | Data Analyst Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      scroll-behavior: smooth;
+    }header {
+  background: #020617;
+  padding: 15px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* HERO */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 { color: #38bdf8; }
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a:hover { color: #38bdf8; }
+
+section { padding: 80px 8%; }
+
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding-top: 100px;
 }
 
 .hero h1 {
-  font-size: 40px;
-  color: #00ADB5;
+  font-size: 3rem;
+  color: #38bdf8;
 }
 
-.hero p {
-  font-size: 18px;
+.hero h3 {
+  margin: 10px 0;
+  color: #cbd5e1;
 }
 
-/* SECTION */
-section {
-  padding: 30px;
-}
-
-h2 {
-  color: #00ADB5;
-}
-
-/* SKILLS */
-.skills span {
+.btn {
   display: inline-block;
+  padding: 12px 22px;
+  background: #38bdf8;
+  color: #000;
+  border-radius: 8px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #38bdf8;
+}
+
+.skills-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card, .project-card {
   background: #1e293b;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 12px;
 }
 
-/* PROJECTS */
-.project {
-  background: #1e293b;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  transition: 0.3s;
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #38bdf8;
+  font-size: 14px;
 }
 
-.project:hover {
-  transform: scale(1.03);
+.resume-box {
+  text-align: center;
 }
 
-/* LINKS */
-a {
-  color: #00ADB5;
-  text-decoration: none;
+.contact-links a {
+  margin-right: 10px;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   background: #020617;
+  font-size: 14px;
 }
-</style>
 
-</head>
-
-<body>
-
-<!-- HERO -->
-<div class="hero">
+  </style>
+</head><body><header>
+  <nav>
+    <h2>Mahesh Muthe</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header><section class="hero">
   <h1>Mahesh Muthe</h1>
-  <p>Data Analyst | SQL | Python | Power BI</p>
-  <p>Turning data into actionable insights 📊</p>
+  <h3>Data Analyst | SQL | Python | Power BI</h3>
+  <p>Turning data into insights & dashboards.</p>
+  <a href="#projects" class="btn">Projects</a>
+</section><section id="about">
+  <h2 class="section-title">About</h2>
+  <p>I am an aspiring Data Analyst with hands-on experience in SQL, Python, Excel, and Power BI.</p>
+</section><section>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">SQL</div>
+    <div class="skill-card">Python</div>
+    <div class="skill-card">Power BI</div>
+    <div class="skill-card">Excel</div>
+  </div>
+</section><section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid"><div class="project-card">
+  <h4>Black Friday SQL</h4>
+  <p>Sales analysis using SQL</p>
+  <a href="#">GitHub Link</a>
 </div>
 
-<!-- ABOUT -->
-<section>
-  <h2>About Me</h2>
-  <p>
-    I am a Data Analyst with a background in Mechanical Engineering.
-    I specialize in Excel, SQL, Power BI, and Python to transform raw data into meaningful insights.
-  </p>
-</section>
+<div class="project-card">
+  <h4>Power BI Dashboard</h4>
+  <p>Interactive dashboard</p>
+  <a href="#">GitHub Link</a>
+</div>
 
-<!-- SKILLS -->
-<section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Excel</span>
-    <span>SQL</span>
-    <span>MySQL</span>
-    <span>Power BI</span>
-    <span>Python</span>
-    <span>Data Cleaning</span>
-    <span>Data Visualization</span>
   </div>
-</section>
-
-<!-- PROJECTS -->
-<section>
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>Excel Sales Dashboard</h3>
-    <p>Built an interactive dashboard using Excel to track sales KPIs, trends, and performance.</p>
-    <p><b>Tools:</b> Excel, Pivot Tables, Charts</p>
-    <a href="#">View Project</a>
+</section><section>
+  <h2 class="section-title">Resume</h2>
+  <div class="resume-box">
+    <a href="#" class="btn">Download Resume</a>
   </div>
-
-  <div class="project">
-    <h3>Power BI Sales Dashboard</h3>
-    <p>Created an interactive dashboard to visualize KPIs and business insights.</p>
-    <p><b>Tools:</b> Power BI</p>
-    <a href="#">View Project</a>
+</section><section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-links">
+    <a href="mailto:maheshmuthe520@gmail.com">Email</a>
+    <a href="https://github.com">GitHub</a>
+    <a href="https://linkedin.com">LinkedIn</a>
   </div>
-
-  <div class="project">
-    <h3>Black Friday Analysis (Python)</h3>
-    <p>Performed data cleaning, EDA, and visualization using Pandas and Matplotlib.</p>
-    <p><b>Tools:</b> Python, Pandas</p>
-    <a href="#">View Project</a>
-  </div>
-
-  <div class="project">
-    <h3>Swiggy Data Analysis</h3>
-    <p>Analyzed restaurant ratings, pricing, and delivery trends.</p>
-    <p><b>Tools:</b> Python, SQL</p>
-    <a href="#">View Project</a>
-  </div>
-
-  <div class="project">
-  <h3>Myntra Data Analysis</h3>
-  <p>Analyzed Myntra sales data using SQL to extract insights on product categories, pricing, and brand performance.</p>
-  <p><b>Tools:</b> MySQL</p>
-  <a href="#">View Project</a>
-  </div>
-
-  <div class="project">
-    <h3>Sugarcane Production Analysis</h3>
-    <p>Analyzed agricultural trends and yearly production changes.</p>
-    <p><b>Tools:</b> Python</p>
-    <a href="#">View Project</a>
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-<section>
-  <h2>Contact</h2>
-
-  <p>Email: 
-    <a href="mailto:maheshmuthe520@gmail.com">
-      maheshmuthe520@gmail.com
-    </a>
-  </p>
-
-  <p>Phone: 
-    <a href="tel:7447721157">
-      7447721157
-    </a>
-  </p>
-
-  <p>LinkedIn: 
-    <a href="https://linkedin.com/in/mahesh-muthe-155825401" target="_blank">
-      View Profile
-    </a>
-  </p>
-
-  <p>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Mahesh Muthe | Data Analyst</p>
-</footer>
-
-</body>
+</section><footer>
+  <p>© 2026 Mahesh Muthe</p>
+</footer></body>
 </html>
