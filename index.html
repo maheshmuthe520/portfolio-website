@@ -1,170 +1,333 @@
-<!DOCTYPE html><html lang="en">
+    <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mahesh Muthe | Data Analyst Portfolio</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
       scroll-behavior: smooth;
-    }header {
-  background: #020617;
-  padding: 15px 8%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    body {
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
 
-nav h2 { color: #38bdf8; }
+    header {
+      background: #111827;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
+    header h1 {
+      color: #38bdf8;
+      font-size: 24px;
+    }
 
-nav ul li a:hover { color: #38bdf8; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
 
-section { padding: 80px 8%; }
+    nav a:hover {
+      color: #38bdf8;
+    }
 
-.hero {
-  text-align: center;
-  padding-top: 100px;
-}
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+    }
 
-.hero h1 {
-  font-size: 3rem;
-  color: #38bdf8;
-}
+    .hero-content h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
 
-.hero h3 {
-  margin: 10px 0;
-  color: #cbd5e1;
-}
+    .hero-content h2 span {
+      color: #38bdf8;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
-  background: #38bdf8;
-  color: #000;
-  border-radius: 8px;
-  margin-top: 15px;
-  margin-right: 10px;
-}
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #cbd5e1;
+    }
 
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: #38bdf8;
-}
+    .btn {
+      display: inline-block;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin: 5px;
+    }
 
-.skills-grid, .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
+    .btn:hover {
+      background: #0ea5e9;
+      transform: scale(1.05);
+    }
 
-.skill-card, .project-card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 12px;
-}
+    section {
+      padding: 80px 50px;
+    }
 
-.project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #38bdf8;
-  font-size: 14px;
-}
+    .section-title {
+      font-size: 32px;
+      color: #38bdf8;
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-.resume-box {
-  text-align: center;
-}
+    .about, .skills, .projects, .contact {
+      max-width: 1100px;
+      margin: auto;
+    }
 
-.contact-links a {
-  margin-right: 10px;
-}
+    .about p {
+      text-align: center;
+      font-size: 18px;
+      color: #e2e8f0;
+      max-width: 800px;
+      margin: auto;
+    }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-  font-size: 14px;
-}
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
 
+    .skill {
+      background: #1e293b;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      background: #334155;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      background: #334155;
+    }
+
+    .project-card h3 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #cbd5e1;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact-box p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .contact-box a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 8px;
+      }
+
+      .hero-content h2 {
+        font-size: 34px;
+      }
+
+      .hero-content p {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+    }
   </style>
-</head><body><header>
-  <nav>
-    <h2>Mahesh Muthe</h2>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header><section class="hero">
-  <h1>Mahesh Muthe</h1>
-  <h3>Data Analyst | SQL | Python | Power BI</h3>
-  <p>Turning data into insights & dashboards.</p>
-  <a href="#projects" class="btn">Projects</a>
-</section><section id="about">
-  <h2 class="section-title">About</h2>
-  <p>I am an aspiring Data Analyst with hands-on experience in SQL, Python, Excel, and Power BI.</p>
-</section><section>
-  <h2 class="section-title">Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">SQL</div>
-    <div class="skill-card">Python</div>
-    <div class="skill-card">Power BI</div>
-    <div class="skill-card">Excel</div>
-  </div>
-</section><section id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="projects-grid"><div class="project-card">
-  <h4>Black Friday Pandas</h4>
-  <p>Sales analysis using Pandas</p>
-  <a href="#">GitHub Link</a>
-</div>
+</head>
+<body>
 
-<div class="project-card">
-  <h4>Power BI Dashboard</h4>
-  <p>Interactive dashboard</p>
-  <a href="#">GitHub Link</a>
-</div>
+  <header>
+    <h1>Mahesh Muthe</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  </div>
-</section><section>
-  <h2 class="section-title">Resume</h2>
-  <div class="resume-box">
-    <a href="#" class="btn">Download Resume</a>
-  </div>
-</section><section id="contact">
-  <h2 class="section-title">Contact</h2>
-  <div class="contact-links">
-    <p>Email: <a href="mailto:maheshmuthe520@gmail.com">maheshmuthe520@gmail.com</a></p>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hi, I'm <span>Mahesh Muthe</span></h2>
+      <p>Aspiring Data Analyst | SQL | Excel | Power BI | Python</p>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
 
-<p>Phone: <a href="tel:7447721157">7447721157</a></p>
+  <section id="about">
+    <div class="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I am an aspiring Data Analyst with a background in Mechanical Engineering.
+        I am passionate about turning raw data into meaningful insights using tools like
+        Excel, SQL, Power BI, and Python. I am currently building real-world projects to
+        strengthen my analytical and problem-solving skills.
+      </p>
+    </div>
+  </section>
 
-<p>LinkedIn: 
-<a href="https://linkedin.com/in/mahesh-muthe-155825401" target="_blank">
-linkedin.com/in/mahesh-muthe-155825401
-</a></p>
+  <section id="skills">
+    <div class="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-list">
+        <div class="skill">Excel</div>
+        <div class="skill">SQL</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Python</div>
+        <div class="skill">Data Cleaning</div>
+        <div class="skill">Data Visualization</div>
+        <div class="skill">Problem Solving</div>
+      </div>
+    </div>
+  </section>
 
-<p>GitHub: 
-<a href="https://github.com/maheshmuthe520" target="_blank">
-github.com/maheshmuthe520
-</a></p>
-</section><footer>
-  <p>© 2026 Mahesh Muthe</p>
-</footer></body>
-</html>
+  <section id="projects">
+    <div class="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid">
+
+        <div class="project-card">
+          <h3>Black Friday Sales Analysis (MySQL)</h3>
+          <p>Analyzed Black Friday sales data using MySQL to find customer purchasing behavior, product trends, and revenue insights.</p>
+          <a href="https://github.com/maheshmuthe520" target="_blank" class="btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Black Friday Sales Analysis (Python)</h3>
+          <p>Performed data cleaning, EDA, and visualization using Python libraries like Pandas, Matplotlib, and Seaborn.</p>
+          <a href="https://github.com/maheshmuthe520" target="_blank" class="btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Swiggy Data Analysis</h3>
+          <p>Explored restaurant, ratings, pricing, and delivery-related patterns to uncover food delivery insights.</p>
+          <a href="https://github.com/maheshmuthe520" target="_blank" class="btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Myntra Data Analysis</h3>
+          <p>Analyzed product categories, pricing, ratings, and brand performance to identify e-commerce insights.</p>
+          <a href="https://github.com/maheshmuthe520" target="_blank" class="btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Sugarcane Production Analysis</h3>
+          <p>Used Python to analyze sugarcane production trends, yearly changes, and agriculture-related patterns.</p>
+          <a href="https://github.com/maheshmuthe520" target="_blank" class="btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Power BI Sales Dashboard</h3>
+          <p>Built an interactive dashboard to track sales performance, customer behavior, and business KPIs visually.</p>
+          <a href="https://github.com/maheshmuthe520" target="_blank" class="btn">View Project</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:maheshmuthe520@gmail.com">maheshmuthe520@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+917447721157">7447721157</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mahesh-muthe-155825401" target="_blank">linkedin.com/in/mahesh-muthe-155825401</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/maheshmuthe520" target="_blank">github.com/maheshmuthe520</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Mahesh Muthe | Data Analyst Portfolio</p>
+  </footer>
+
+</body>
+  </html>
